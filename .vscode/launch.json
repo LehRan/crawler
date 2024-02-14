@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "configurations": [
+    {
+      "name": "tsx",
+      "type": "node",
+      "request": "launch",
+  
+      "args": ["https://www.wikipedia.org/", "1"],
+      "program": "src/index.ts",
+  
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/tsx",
+  
+      "skipFiles": [
+          "<node_internals>/**",
+          "${workspaceFolder}/node_modules/**",
+      ],
+    },
+    {
+      "name": "Attach to process",
+      "type": "node",
+      "request": "attach",
+      "port": 9229,
+      "skipFiles": [
+          "<node_internals>/**",
+          "${workspaceFolder}/node_modules/**",
+      ],
+    }
+  ]
+}
